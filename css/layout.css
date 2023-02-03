@@ -1,0 +1,406 @@
+@font-face {
+  font-family: "Noto";
+  src: url("../font/Noto_Serif/NotoSerif-Regular.ttf");
+}
+@font-face {
+  font-family: "Noto Bold";
+  src: url("../font/Noto_Serif/NotoSerif-Bold.ttf");
+}
+p,
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Noto";
+  color: black;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+main {
+  display: grid;
+  /* grid-template-rows: auto 1fr auto; */
+  justify-content: center;
+}
+header {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+header h1 {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  font-family: "Noto";
+}
+ul {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 0;
+}
+nav ul a:link,
+ul a:visited,
+ul a:active {
+  text-decoration: none;
+  color: black;
+}
+nav ul a:hover {
+  font-size: 110%;
+}
+
+/* -------------Category------------------- */
+#category_list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  margin: 0 -10% 0 -10%;
+}
+#category_list a {
+  text-decoration: none;
+  color: black;
+}
+#category_list a:hover div {
+  width: 160px;
+  height: 160px;
+}
+.category_item {
+  background-color: #eff1c5;
+  /* text-align: center; */
+  width: 150px;
+  height: 150px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: 20% 5% 20% 5%;
+}
+/* ---------------------------------------- */
+
+/* -----------Productlist------------------ */
+#product_list {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+#product_list a {
+  text-decoration: none;
+}
+
+.product_item {
+  background-color: #a2a77f;
+  /* text-align: center; */
+  width: 300px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 4fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  margin: 20% 0% 20% 0%;
+}
+
+.product_item img {
+  max-width: 100%;
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+.product_item p {
+  grid-column: 1/2;
+}
+#new_price {
+  grid-column: 2/3;
+}
+
+.product_item h2 {
+  grid-column: 1/3;
+  font-size: 130%;
+}
+
+.gone {
+  filter: grayscale(100%) blur(1px);
+}
+.soldout {
+  z-index: 3;
+  height: 20%;
+  width: 100%;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  background-color: grey;
+  color: black;
+  text-align: center;
+  align-self: flex-start;
+}
+.soldout p {
+  font-family: "Noto Bold";
+  font-size: 120%;
+}
+
+.discount {
+  z-index: 2;
+  height: 20%;
+  width: 100%;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  font-family: "Rubik";
+  font-size: 120%;
+  background-color: #eff1c5;
+  text-align: center;
+  align-self: flex-start;
+}
+.discount p {
+  font-family: "Noto Bold";
+  font-size: 100%;
+}
+.price_change {
+  text-decoration: line-through;
+}
+/* ---------------------------------------- */
+
+/* --------------Product------------------- */
+.product {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 6fr 2fr 2fr 4fr 2fr;
+}
+.product img {
+  height: 500px;
+  grid-row: 2/3;
+  grid-column: 1/2;
+  justify-self: start;
+}
+#info {
+  grid-column: 1/2;
+  grid-row: 5/6;
+}
+#price {
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+#button {
+  grid-column: 1/2;
+  grid-row: 6/7;
+  align-self: center;
+  justify-self: center;
+}
+button {
+  font-family: "Noto";
+  font-size: 150%;
+}
+#type_brand {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+.product ol {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  list-style: none;
+  font-family: "Noto";
+  color: black;
+  display: flex;
+  /* grid-template-columns: repeat(3, 1fr); */
+  justify-content: flex-start;
+  padding: 0;
+}
+.product ol a:link,
+ol a:visited,
+ol a:active,
+ol a:hover {
+  text-decoration: underline;
+  color: black;
+  margin-right: 10px;
+}
+
+/* ---------------------------------------- */
+
+footer {
+  padding: 20px 0 20px 0;
+  text-align: center;
+  background-color: #a2a77f;
+}
+
+.hide {
+  opacity: 0;
+}
+
+@media (min-width: 800px) {
+  /* -------------Category------------------- */
+  #category_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    margin: 0 -30% 0 -30%;
+  }
+  #category_list a {
+    text-decoration: none;
+    color: black;
+  }
+  #category_list a:hover div {
+    width: 210px;
+    height: 210px;
+  }
+  .category_item {
+    background-color: #eff1c5;
+    /* text-align: center; */
+    width: 200px;
+    height: 200px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 20% 0 20% 0;
+  }
+
+  /* -----------Productlist------------------ */
+  #product_list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    margin-left: -10%;
+    margin-right: -10%;
+  }
+  #product_list a {
+    margin: 5%;
+    text-decoration: none;
+  }
+
+  .product_item {
+    background-color: #a2a77f;
+    /* text-align: center; */
+    width: 300px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 20% 5% 20% 5%;
+  }
+
+  .product_item img {
+    max-width: 100%;
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .product_item p {
+    grid-column: 1/2;
+  }
+  #new_price {
+    grid-column: 2/3;
+  }
+
+  .product_item h2 {
+    grid-column: 1/3;
+    font-size: 130%;
+  }
+
+  .gone {
+    filter: grayscale(100%) blur(1px);
+  }
+  .soldout {
+    z-index: 3;
+    height: 20%;
+    width: 100%;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    background-color: grey;
+    color: black;
+    text-align: center;
+    align-self: flex-start;
+  }
+  .soldout p {
+    font-family: "Noto Bold";
+    font-size: 120%;
+  }
+
+  .discount {
+    z-index: 2;
+    height: 20%;
+    width: 100%;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    font-family: "Rubik";
+    font-size: 120%;
+    background-color: #eff1c5;
+    text-align: center;
+    align-self: flex-start;
+  }
+  .discount p {
+    font-family: "Noto Bold";
+    font-size: 100%;
+  }
+  .price_change {
+    text-decoration: line-through;
+  }
+  /* ---------------------------------------- */
+
+  /* --------------Product------------------- */
+  .product {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 5fr;
+    margin-left: -15%;
+    margin-right: -15%;
+  }
+  .product img {
+    height: 500px;
+    grid-column: 1/2;
+    grid-row: 2/5;
+    justify-self: center;
+    align-self: center;
+    margin-left: 5%;
+  }
+  #info {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+  #price {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  #button {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    align-self: center;
+    justify-self: center;
+  }
+  button {
+    font-family: "Noto";
+    font-size: 150%;
+  }
+  #type_brand {
+    grid-column: 2/3;
+    grid-row: 2/4;
+  }
+  .product ol {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    list-style: none;
+    font-family: "Noto";
+    color: black;
+    display: flex;
+    /* grid-template-columns: repeat(3, 1fr); */
+    justify-content: flex-start;
+  }
+  .product ol a:link,
+  ol a:visited,
+  ol a:active,
+  ol a:hover {
+    text-decoration: underline;
+    color: black;
+    margin-right: 10px;
+  }
+
+  /* ---------------------------------------- */
+}
