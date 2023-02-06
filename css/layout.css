@@ -132,7 +132,7 @@ nav ul a:hover {
 .gone {
   filter: grayscale(100%) blur(1px);
 }
-.soldout {
+#soldout {
   z-index: 3;
   height: 20%;
   width: 100%;
@@ -143,7 +143,7 @@ nav ul a:hover {
   text-align: center;
   align-self: flex-start;
 }
-.soldout p {
+#soldout p {
   font-family: "Noto Bold";
   font-size: 120%;
 }
@@ -308,7 +308,7 @@ footer {
   .gone {
     filter: grayscale(100%) blur(1px);
   }
-  .soldout {
+  #soldout {
     z-index: 3;
     height: 20%;
     width: 100%;
@@ -319,7 +319,7 @@ footer {
     text-align: center;
     align-self: flex-start;
   }
-  .soldout p {
+  #soldout p {
     font-family: "Noto Bold";
     font-size: 120%;
   }
