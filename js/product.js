@@ -13,8 +13,8 @@ function showProduct(product) {
 
   document.querySelector("#type_brand .subcategory").textContent = product.subcategory;
   document.querySelector("#type_brand .brand").textContent = product.brandname;
-  document.querySelector("#price .price_change").textContent = product.price;
-  document.querySelector("#price #new_price").textContent = (product.price / 100) * product.discount;
+  document.querySelector("#price .price_change").textContent = "DKK " + product.price + ",-";
+  document.querySelector("#price #new_price").textContent = "DKK " + (product.price / 100) * product.discount + ",-";
   document.querySelector("#price .discount").textContent = product.discount + "% discount";
   document.querySelector("#info .color").textContent = product.basecolour;
   document.querySelector("#info .i_number").textContent = product.id;
