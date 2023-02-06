@@ -350,8 +350,9 @@ footer {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: 1fr 2fr 2fr 5fr;
-    margin-left: -15%;
-    margin-right: -15%;
+    /* margin-left: -15%;
+    margin-right: -15%; */
+    margin-bottom: 2%;
   }
   .product img {
     height: 500px;
@@ -383,9 +384,13 @@ footer {
     grid-column: 2/3;
     grid-row: 2/4;
   }
-  .product ol {
+  #where_am_i {
     grid-column: 1/3;
     grid-row: 1/2;
+  }
+  .product ol {
+    /* grid-column: 1/3;
+    grid-row: 1/2; */
     list-style: none;
     font-family: "Noto";
     color: black;

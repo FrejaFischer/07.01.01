@@ -20,17 +20,21 @@
     </header>
     <main>
       <div id="product_list">
-        <a href="product.html">
-          <div class="product_item">
-            <img src="https://kea-alt-del.dk/t7/images/webp/640/1525.webp" alt="" />
-            <h2>Deck Navy Blue Backpack</h2>
-            <p>Backpack | Puma</p>
-            <p>DKK 1.299,-</p>
-            <div class="soldout hide"><p>Sold Out</p></div>
-            <p id="new_price" class="hide">x</p>
-            <div class="discount hide"><p>Discount x%</p></div>
-          </div>
-        </a>
+        <template id="product_item_template">
+          <a href="product.html">
+            <div class="product_item">
+              <img src="https://kea-alt-del.dk/t7/images/webp/640/1525.webp" alt="" />
+              <h2>Deck Navy Blue Backpack</h2>
+              <p><span class="subcategory">Cap </span> | <span class="brand">Puma</span></p>
+              <p id="price">DKK 1.299,-</p>
+              <div id="soldout"><p>Sold Out</p></div>
+              <p id="new_price">x</p>
+              <div class="discount hide"><p>Discount x%</p></div>
+            </div>
+          </a>
+        </template>
+
+        <!--         
         <a href="product.html">
           <div class="product_item">
             <img src="https://kea-alt-del.dk/t7/images/webp/640/1526.webp" alt="" />
@@ -118,9 +122,10 @@
             <p id="new_price">DKK 315,-</p>
             <div class="discount"><p>Discount 55%</p></div>
           </div>
-        </a>
+        </a> -->
       </div>
     </main>
     <footer>Copyright © 2023</footer>
+    <script src="js/productlist.js"></script>
   </body>
 </html>
