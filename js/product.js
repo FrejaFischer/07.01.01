@@ -27,4 +27,16 @@ function showProduct(product) {
     console.log("in stock");
     document.querySelector("#soldout").classList.add("hide");
   }
+
+  if (product.discount !== null) {
+    console.log("not null");
+
+    document.querySelector("#new_price").textContent = "DKK " + Math.trunc((product.price / 100) * product.discount) + ",-";
+    document.querySelector("p:first-child").classList.add("price_change");
+  } else {
+    console.log("null");
+    document.querySelector("#new_price").classList.add("hide");
+    document.querySelector(".discount").classList.add("hide");
+    document.querySelector("p:first-child").classList.remove("price_change");
+  }
 }
